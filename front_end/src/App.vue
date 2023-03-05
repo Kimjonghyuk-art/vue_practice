@@ -10,11 +10,19 @@
 <script>
 import MainHeader from "./components/MainHeader.vue";
 import MainFooter from './components/MainFooter.vue';
+import store from './scripts/store';
 export default {
   name: 'App',
   components: {
     MainHeader,
     MainFooter,
+  },
+  setup() {
+    const id = sessionStorage.getItem("id");
+
+    if(id) {
+      store.commit("setAccount", id);  
+    }
   }
  
 }
