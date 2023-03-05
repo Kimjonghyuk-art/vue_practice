@@ -1,7 +1,7 @@
 <template>
 <main-header></main-header>
 
-<main-home></main-home>
+<RouterView></RouterView>
 
 <main-footer></main-footer>
 
@@ -10,13 +10,11 @@
 <script>
 import MainHeader from "./components/MainHeader.vue";
 import MainFooter from './components/MainFooter.vue';
-import MainHome from './pages/MainHome.vue';
 export default {
   name: 'App',
   components: {
     MainHeader,
     MainFooter,
-    MainHome
   }
  
 }
