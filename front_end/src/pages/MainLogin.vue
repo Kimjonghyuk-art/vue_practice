@@ -40,6 +40,7 @@ export default {
     const submit = () => {
       axios.post("/api/account/login", state.form).then((result) => {
         store.commit('setAccount', result.data);
+        console.log(result.data);
         sessionStorage.setItem("id", result.data);
         router.push({path: "/"});
         window.alert("로그인하였습니다.");
